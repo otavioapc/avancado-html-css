@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Completo em HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Formulário Completo em HTML</h1>
+
+    <!-- Criar formulário -->
+    <!-- action => para onde os dados vão -->
+    <!-- method => como o form vai ser enviado -->
+    <form action="/registro" method="post">
+
+        <!-- inputs => entradas -->
+        <!-- label(for) => para quem a label se refere, a qual input -->
+        <!-- Input(name) => atributo name ajuda a criar o laço entre label e input-->
+        <label for="name">Nome:</label>
+        <input type="text" name="name" required placeholder="Digite seu primeiro nome">
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" placeholder="Digite seu e-mail">
+
+        <label for="password">Senha:</label>
+        <input type="password" name="password" placeholder="Digite sua senha">
+
+        <!-- Textos mais longos = textarea -->
+
+        <label for="mensagem">Mensagem:</label> 
+        <textarea name="mensagem" placeholder="Digite o que você achou do sistema"></textarea> 
+
+        <!-- Formas de Seleção -->
+
+        <!-- Selecionar algo, quero exibir todas as opcoes, mas só pode selecionar uma (radio)-->
+        <h2>Preferências</h2>
+        <p>Genêro:</p>
+
+        <input type="radio" name="genero" value="Masculino">
+        <label for="masculino">Masculino</label>
+
+        <input type="radio" name="genero" value="Feminino">
+        <label for="feminino">Feminino</label>
+
+        <input type="radio" name="genero" value="Outro">
+        <label for="outro">Outro</label>
+
+        <!-- Pode selecionar 1 ou + (checkbox) -->
+        <p>Interesses</p>
+
+        <input type="checkbox" name="interesses" value="Música" />
+        <label for="musica">Música</label>
+
+        <input type="checkbox" name="interesses" value="Esporte" />
+        <label for="esporte">Esporte</label>
+
+        <input type="checkbox" name="interesses" value="Viagem" />
+        <label for="viagem">Viagem</label>
+
+        <!-- Quero esconder as opções, limitar 1 -->
+        <label for="cidade">Cidade:</label>
+        <select name="cidade">
+            <option value="">Selecione a sua cidade</option>
+            <option value="Curitiba">Curitiba</option>
+            <option value="Guarapuava">Guarapuava</option>
+            <option value="Araucária">Araucária</option>
+        </select>
+
+        <!-- Tipos HTML5 -->
+
+        <label for="data_nascimento">Data de nascimento:</label>
+        <input type="date" name="data_nascimento">
+
+        <label for="hora_contato">Selecione o horário</label>
+        <input type="time" name="hora_contato">
+
+        <label for="cor">Selecione a cor:</label>
+        <input type="color" name="cor">
+
+        <!-- Envio de arquivos -->
+
+        <div>
+            <input type="file" name="arquivo" accept=".pdf, .png">
+        </div>
+        <div>
+            <input type="file" name="arquivo" accept=".pdf, .png" multiple>
+        </div>
+
+        <!-- botão ação = submit -->
+        <!-- <input type="submit" value="Enviar"> -->
+        <div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar form</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

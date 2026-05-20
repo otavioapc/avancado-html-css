@@ -1,0 +1,99 @@
+h1{
+    color: red;
+}
+
+/*2. Sintaxe media query*/
+@media screen and (max-width: 500px){
+    /*MAX-WIDTH -> telas menores que alguma resolução*/
+    h1{
+        color: blue;
+    }
+
+}
+
+/*3. Outros modos*/
+/*screen, print, speech, all*/
+
+/*Print -> Altera quando é realizado uma impressão da página (Crtl + P)*/
+
+@media print and (max-width: 600px){
+    h1{
+        color: green;
+    }
+}
+
+/*4. All -> engloba tudo*/
+
+@media (max-width: 700px){
+    h2{
+        color: purple;
+    }
+}
+
+/*5. Mobile first*/
+/*min-width > max-width*/
+
+@media(min-width: 200px){
+    h2{
+        color: teal;
+    }
+}
+
+/*6. AND na media query*/
+
+@media (min-width: 300px) and (max-width: 400px){
+    h3{
+        font-size: 3em;
+    }
+}
+
+/*7. Orientation (Rodar o celular para horinzontal)*/
+
+@media (orientation: landscape){
+    h3{
+        color: brown;
+    }
+}
+
+/*8. OR na media query*/
+
+@media (max-width: 200px), (orientation: landscape){
+    h3{
+        font-size: 4em;
+    }
+}
+
+/*9. Breakpoints*/
+
+h5{
+    color: aqua;
+    font-size: 2em;
+}
+
+/*480px - 768px = tablet*/
+@media (min-width: 480px){
+    h5{
+        color: burlywood;
+    }
+}
+
+/*768px - 1024px = telas menores, laptops*/
+@media(min-width: 768px){
+    h5{
+        color: cadetblue;
+    }
+}
+
+/*1024px - 1200px = desktop*/
+@media(min-width: 1024px){
+    h5{
+        color: coral;
+    }
+}
+
+/*1200 e + = telas maiores, tvs*/
+@media(min-width: 1200px){
+    h5{
+        color: darkorchid;
+    }
+}
